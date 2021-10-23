@@ -1,8 +1,14 @@
 #include <iostream>
 
 
-auto main()-> int
+auto main(int argc, char* argv[]) -> int
 {
-    std::cout << "Hello, World! ${name}\n";
+    if (argc == 0) {
+        return 1;
+    }
+
+    auto const name = std::string{argv[1]};
+    std::cout << "Hello, " << name << "! How are you? :)\n";
+
     return 0;
 }
