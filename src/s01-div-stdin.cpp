@@ -3,10 +3,10 @@
 
 auto get_user_input(std::string prompt) -> int
 {
-    std::cout << prompt << "Number:";
+    std::cout << prompt << ": ";
 
     auto number = std::string{};
-    std::getline(std::cin, n);
+    std::getline(std::cin, number);
 
     return std::stoi(number);
 }
